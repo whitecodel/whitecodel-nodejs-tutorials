@@ -1,5 +1,9 @@
-for (const i = 0; i < 10; i++) {
-  console.log("from inside", i);
+class Students {
+  static name = "Student";
+
+  static sample = () => {
+    console.log("console from arrow function");
+  };
 }
 
-console.log("from outside", i);
+Students.sample();
