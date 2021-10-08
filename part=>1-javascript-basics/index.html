@@ -7,14 +7,27 @@
     <title>Document</title>
   </head>
   <body>
-    <button onclick="btnClick()">submit</button>
+    <button id="btn">submit</button>
+    <button id="changestyle">change style</button>
+
+    <div id="container"></div>
+
     <script>
-      function btnClick() {
-        console.log("clicked");
-      }
-      //   document.addEventListener("DOMContentLoaded", function () {
-      //     console.log("hello");
-      //   });
+      var i = 0;
+      var btn = document.getElementById("btn");
+      var changestyle = document.getElementById("changestyle");
+
+      var div = document.getElementById("container");
+
+      btn.addEventListener("click", function () {
+        i++;
+        div.append(i);
+      });
+
+      changestyle.addEventListener("click", function () {
+        div.style["color"] = "red";
+        div.style["background-color"] = "black";
+      });
     </script>
   </body>
 </html>
